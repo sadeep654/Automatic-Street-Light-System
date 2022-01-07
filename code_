@@ -1,0 +1,21 @@
+int light_sensor=A0;
+int output_signal=7;
+void setup()
+{
+  pinMode(output_signal, OUTPUT);
+  pinMode(light_sensor, INPUT);
+}
+
+void loop()
+{
+ int x= analogRead(light_sensor);
+  if(x>=700)
+ {
+   digitalWrite(output_signal, LOW);
+ }
+  else 
+  {
+   digitalWrite(output_signal, HIGH);
+    
+  }
+}
